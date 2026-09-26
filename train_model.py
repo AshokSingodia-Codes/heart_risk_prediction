@@ -24,7 +24,7 @@ RANDOM_STATE = 42
 TARGET = "Heart_Risk"
 
 # ── 1. Load data ──────────────────────────────────────────────────────────────
-df = pd.read_csv(r"C:\Users\srcsi\OneDrive\Desktop\100daysml\heart riskprediction\heart_disease_risk_dataset_earlymed.csv")
+df = pd.read_csv("heart_disease_risk_dataset_earlymed.csv")
 df.drop_duplicates(inplace=True)
 df = df.sample(frac=1, random_state=RANDOM_STATE).reset_index(drop=True)
 
@@ -288,7 +288,7 @@ bundle = {
     "description": "Heart disease risk model with clinical feature engineering and validation-tuned threshold."
 }
 
-joblib.dump(bundle, "heart_disease_model.joblib")
+joblib.dump(bundle, "heart_disease_model.pkl")
 
-print("\nSaved: heart_disease_model.joblib")
+print("\nSaved: heart_disease_model.pkl")
 print("Bundle keys:", list(bundle.keys()))

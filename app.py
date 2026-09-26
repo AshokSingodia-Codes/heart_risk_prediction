@@ -145,7 +145,7 @@ def engineer_features(df):
 
 @st.cache_resource
 def load_model():
-    return joblib.load("heart_disease_model.joblib")
+    return joblib.load("heart_disease_model.pkl")
 
 try:
     bundle = load_model()
@@ -153,7 +153,7 @@ try:
     THRESHOLD = bundle["threshold"]
     FEATURE_NAMES = bundle["feature_names"]
 except FileNotFoundError:
-    st.error("heart_disease_model.joblib not found. Please run train_model.py first.")
+    st.error("heart_disease_model.pkl not found. Please run train_model.py first.")
     st.stop()
 
 # ─────────────────────────────────────────────────────────────
