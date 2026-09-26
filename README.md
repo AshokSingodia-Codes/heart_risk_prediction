@@ -1,5 +1,7 @@
 # 🫀 CardioGuard AI - Heart Risk Prediction
 
+🌐 **Live Demo:** [CardioGuard AI on Streamlit](https://ashoksingodia-codes-heart-risk-prediction-app-a8gdyp.streamlit.app/)
+
 CardioGuard AI is an educational machine learning project and web application that provides a quick cardiovascular risk assessment based on a patient's vital signs, symptoms, lifestyle, and medical history.
 
 The project consists of a Python-based machine learning pipeline (Logistic Regression) and an interactive web interface built with Streamlit.
